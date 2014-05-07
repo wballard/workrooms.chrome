@@ -3,9 +3,6 @@
   "version": "0.0.2",
   "manifest_version": 2,
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
-  "browser_action": {
-    "default_title": "Workrooms"
-  },
   "icons" : {
     "128": "images/icon.png"
   },

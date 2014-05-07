@@ -8,16 +8,7 @@ which in some sense it no big deal as this isn't really a 'page' at all. So -- c
 
     _ = require('lodash')
 
-    console.log 'starting application'
-
-    chrome.browserAction.setIcon path: '../images/tool_icon.png'
-
     screenpicker = new Screenpicker()
-
-Of course, chrome events don't follow the pattern for dom elements...
-
-    chrome.browserAction.onClicked.addListener =>
-      console.log 'OUCH!'
 
 Multiple channels will be coming from from multiple possible content page tabs.
 
