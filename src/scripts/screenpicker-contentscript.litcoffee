@@ -15,6 +15,13 @@ is required to get the permissions correct to allow sharing the screen.
 Listen for window events, these will be coming in from the appication running
 on page.
 
-    window.addEventListener 'message', (evt) ->
-      console.log 'content window message', evt
-      channel.postMessage evt.data
+    if not document.getElementById('workrooms-extension-is-installed')
+      window.addEventListener 'message', (evt) ->
+        console.log 'content window message', evt
+        channel.postMessage evt.data
+
+Mark that the extension is available.
+
+      isInstalledNode = document.createElement('div')
+      isInstalledNode.id = 'workrooms-extension-is-installed'
+      document.body.appendChild(isInstalledNode)
